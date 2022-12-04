@@ -12,3 +12,16 @@ INSERT INTO driver(driver_id, first_name, last_name, mobile_no, email, id_no, ca
 (3, "Driver 3", "Chua", 88888882, "Diver3@gmail.com", "id3333", "car3333"),
 (4, "Driver 4", "Ang", 88888883, "Diver4@gmail.com", "id4444", "car4444"),
 (5, "Driver 5", "Chua", 88888884, "Diver5@gmail.com", "id55555", "car5555");
+
+INSERT INTO trip(trip_id, passanger_id, pick_up, drop_off, start, end) VALUES
+(1, 1, "654321", "123456", "2022-02-12 14:19:25", "2022-02-12 14:19:25"),
+(2, 1, "123456", "654321", "2022-04-12 14:19:25", null),
+(3, 3, "111111", "222222", "2022-04-12 14:19:25", "2022-04-12 14:19:25");
+
+INSERT INTO trip_assignment(trip_id, driver_id, status) VALUES
+(1, 1, "done"),
+(1, 2, "rejected"),
+(1, 3, "rejected"),
+(2, 1, "rejected"),
+(2, 4, "riding"),
+(3, 5, "done");

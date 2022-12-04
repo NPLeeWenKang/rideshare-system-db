@@ -2,6 +2,7 @@
 DROP TABLE IF EXISTS passanger;
 DROP TABLE IF EXISTS driver;
 DROP TABLE IF EXISTS trip;
+DROP TABLE IF EXISTS trip_assignment;
 
 -- Create Tables
 CREATE TABLE passanger (
@@ -24,11 +25,17 @@ CREATE TABLE driver (
 );
 CREATE TABLE trip (
     trip_id int AUTO_INCREMENT,
-    driver_id int REFERENCES driver(driver_id),
     passanger_id int REFERENCES passanger(passanger_id),
-    pickup text,
-    dropoff text,
+    pick_up text,
+    drop_off text,
     start TIMESTAMP,
     end TIMESTAMP,
-    PRIMARY KEY(trip_id)
+    PRIMARY KEY(trip_id, passanger_id)
+);
+
+CREATE TABLE trip_assignment (
+    trip_id int REFERENCES trip(trip_id),
+    driver_id int REFERENCES driver(driver_id),
+    status text,
+    PRIMARY KEY(trip_id, driver_id)
 );
