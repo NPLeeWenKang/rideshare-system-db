@@ -21,6 +21,7 @@ CREATE TABLE driver (
     email text,
     id_no text,
     car_no text,
+    is_available BOOLEAN,
     PRIMARY KEY(driver_id)
 );
 CREATE TABLE trip (
@@ -36,6 +37,7 @@ CREATE TABLE trip (
 CREATE TABLE trip_assignment (
     trip_id int REFERENCES trip(trip_id),
     driver_id int REFERENCES driver(driver_id),
-    status text,
+    status text CHECK (status IN ('PENDING', 'REJECTED','ACCEPTED','DRIVING','DONE')),
+    assign_datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(trip_id, driver_id)
 );
