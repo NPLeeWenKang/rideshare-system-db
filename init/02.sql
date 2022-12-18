@@ -17,8 +17,7 @@ INSERT INTO trip(trip_id, passenger_id, pick_up, drop_off, start, end) VALUES
 (1, 1, "654321", "123456", "2022-02-12 14:19:25", "2022-02-12 14:19:25"),
 (2, 1, "123456", "654321", "2022-04-12 14:19:25", null),
 (3, 3, "111111", "222222", "2022-04-12 14:19:25", "2022-04-12 14:19:25"),
-(4, 1, "111111", "222222", null, null),
-(5, 2, "111111", "222222", null, null);
+(4, 1, "111111", "222222", null, null);
 
 INSERT INTO trip_assignment(trip_id, driver_id, status, assign_datetime) VALUES
 (1, 1, "REJECTED", "2022-12-14 14:47:40"),
@@ -28,4 +27,4 @@ INSERT INTO trip_assignment(trip_id, driver_id, status, assign_datetime) VALUES
 (2, 4, "DRIVING", "2022-12-14 14:47:42"),
 (3, 5, "DONE", "2022-12-14 14:47:42"),
 (4, 1, "REJECTED", "2022-12-14 14:47:41"),
-(4, 2, "REJECTED", "2022-12-14 14:47:42");
+(4, 2, "ACCEPTED", "2022-12-14 14:47:42");
