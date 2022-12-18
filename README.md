@@ -6,5 +6,5 @@ This repository contains all the setup config for the MySQL database and the doc
 For the full setup guide of the system, please head to the master repository ([rideshare-cli](https://github.com/NPLeeWenKang/rideshare-cli)).
 
 ```
-go run .
+docker-compose down --volume && docker-compose up --build -d
 ```
