@@ -1,7 +1,10 @@
-# web-database
+# rideshare-system-db
 
-This repo initiates a postgres database and starts an "adminer" website that acts as a GUI for the database. The [express server](https://github.com/icttimetable/express-server) depends on this repo.
+This repository contains all the setup config for the MySQL database and the docker instance. To set up the service, simply clone and run the docker-compose command. 
 
-## How to setup
 
-Please read the documentation in https://github.com/icttimetable/docs.
+For the full setup guide of the system, please head to the master repository ([rideshare-cli](https://github.com/NPLeeWenKang/rideshare-cli)).
+
+```
+go run .
+```
